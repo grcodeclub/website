@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Styles</title>
+  <style>
+    .button {
+  background-color: #363231;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  background-color: #363231;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button:hover {opacity: 1;}
+
+  </style>
+</head>
+<body>
+
+  <button class="button">Button</button>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>ΚΥΚΛΟΙ</title>
+        <style>
+            html,body{
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bg_circle{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            .circle{
+                position: absolute;
+                border-radius: 50%;
+                background-color: black;
+                animation: bounce 5s ease infinite;
+            }
+            @keyframes bounce{
+                0% {top:100%; opacity: 0;}
+                50% {top:50%; opacity: 1;}
+                100% {top: -10%; opacity: 0;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg_circle"></div>
+        <script>
+            function createCircle(){
+                const circle = document.createElement('div');
+            circle.classList.add('circle');
+            const size = Math.floor(Math.random() * 40) + 20;
+            circle.style.width = `${size}px`;
+            circle.style.height = `${size}px`;
+            circle.style.left = `${Math.floor(Math.random() * 100)}%`;
+            circle.style.animationDuration = `${Math.floor(Math.random() * 5) + 4}s`;
+            return circle;
+        }
+        const container = document.querySelector('.bg_circle');
+        setInterval(() => {
+            const circle = createCircle();
+            container.appendChild(circle);
+            setTimeout(() => circle.remove(), 5000);
+        }, 500);
+            
+        </script>
+    </body>
+</html>

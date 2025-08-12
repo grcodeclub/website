@@ -1,0 +1,34 @@
+<!-- Ας δούμε ένα παράδειγμα όπου δημιουργούμε ένα animation που κινεί ένα στοιχείο από αριστερά προς τα δεξιά. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Keyframes Example</title>
+    <style>
+        /* Ορίζουμε το animation */
+        @keyframes moveRight {
+            from {
+                transform: translateX(0);
+                background-color: red;
+            }
+            to {
+                transform: translateX(300px);
+                background-color: blue;
+            }
+        }
+
+        /* Εφαρμόζουμε το animation σε ένα στοιχείο */
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: moveRight 2s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ας δούμε ένα παράδειγμα όπου δημιουργούμε ένα animation που κινεί ένα στοιχείο από αριστερά προς τα δεξιά.</h1>
+    <div class="animated-box"></div>
+</body>
+</html>

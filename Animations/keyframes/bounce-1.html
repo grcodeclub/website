@@ -1,0 +1,36 @@
+<!-- Το animation "bounce" είναι ένα παράδειγμα μιας CSS animation που δημιουργεί ένα εφέ "αναπήδησης" (bounce) σε ένα στοιχείο. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Keyframes Full Example</title>
+    <style>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-150px);
+            }
+            60% {
+                transform: translateY(-75px);
+            }
+        }
+
+        .bouncing-box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            animation: bounce 2s ease infinite;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+<body>
+    <h1>Το animation "bounce" είναι ένα παράδειγμα μιας CSS animation που δημιουργεί ένα εφέ "αναπήδησης" (bounce) σε ένα στοιχείο.</h1>
+    <div class="bouncing-box"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In/Out Example</title>
+    <style>
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .fade-box {
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            animation: fadeInOut 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+      <h1>Fade In/Out Example</h1>
+    <div class="fade-box"></div>
+</body>
+</html>

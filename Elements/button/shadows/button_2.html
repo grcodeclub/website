@@ -1,0 +1,57 @@
+<!-- Το κουμπί έχει σκούρο gradient φόντο και στρογγυλεμένες άκρες με έντονη σκιά που του προσδίδει βάθος. Όταν περνάς το 
+ποντίκι πάνω του, το κουμπί μεγαλώνει και η σκιά γίνεται πιο έντονη, προσφέροντας μια "εφέ ανασήκωσης". Όταν το πατάς, 
+το κουμπί μικραίνει και η σκιά σκουραίνει, δίνοντας την αίσθηση ότι το κουμπί είναι πραγματικά πατημένο. Οι αλλαγές αυτές 
+είναι δραστικές, δίνοντας έντονη οπτική αντίδραση στον χρήστη. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Styles</title>
+  <style>
+    .button {
+        background-color: #363231;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 18px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        margin: 5px;
+        
+        /* Gradient φόντο */
+        background-image: linear-gradient(140deg, rgb(78,78,80), rgb(110,108,104), rgb(0,0,0));
+        
+        /* Στρογγυλεμένες άκρες και σκιά */
+        border-radius: 8px;
+        box-shadow: 0 15px 30px -5px rgb(119, 0, 255);
+        
+        /* Στυλ γραμματοσειράς */
+        font-family: Phantomsans, sans-serif;
+        display: inline-block;
+    }
+
+    /* Έντονες αλλαγές στο hover */
+    .button:hover {
+        background-image: linear-gradient(140deg, rgb(0, 0, 0), rgb(119, 0, 255));
+        box-shadow: 0 10px 20px -5px rgba(119, 0, 255, 0.6);
+        transform: scale(1.1); /* Μεγαλώνει το κουμπί */
+    }
+
+    /* Πολύ έντονες αλλαγές στο active */
+    .button:active {
+        background-image: linear-gradient(140deg, rgb(119, 0, 255), rgb(0, 0, 0));
+        box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.6);
+        transform: scale(0.95); /* Μικραίνει το κουμπί όταν το πατάς */
+    }
+
+  </style>
+</head>
+<body>
+
+  <button class="button">Button</button>
+
+</body>
+</html>

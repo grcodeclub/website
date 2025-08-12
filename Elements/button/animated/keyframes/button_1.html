@@ -1,0 +1,61 @@
+<!-- Δημιουργούμε μια animation για να αλλάξουμε τα χρώματα σε διαφορετικά σημεία του χρόνου. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layered Gradient Button with Animation</title>
+  <style>
+    /* Δημιουργία της animation για τα γραδιέντα */
+    @keyframes gradientAnimation {
+      0% {
+        background-image: 
+          linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5)),
+          linear-gradient(135deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 255, 0.5));
+      }
+      50% {
+        background-image: 
+          linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(255, 0, 255, 0.5)),
+          linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 255, 0, 0.5));
+      }
+      100% {
+        background-image: 
+          linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5)),
+          linear-gradient(135deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 255, 0.5));
+      }
+    }
+
+    .button {
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 18px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      margin: 5px;
+      font-family: Eina01, sans-serif;
+      font-weight: 800;
+      position: relative;
+      z-index: 0;
+      border-radius: 6px; /* Στρογγυλεμένες άκρες */
+      background-color: white; /* Αρχικό χρώμα φόντου */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ελαφριά σκιά γύρω από το κουμπί */
+      animation: gradientAnimation 5s ease infinite; /* Εφαρμογή της animation */
+    }
+
+    /* Εφέ κατά το hover */
+    .button:hover {
+      background-color: #000000; /* Χρώμα φόντου κατά το hover */
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <button class="button">Button</button>
+
+</body>
+</html>

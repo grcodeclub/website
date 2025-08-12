@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Styles</title>
+  <style>
+    .button {
+      background-color: #363231;
+      border: none;
+      border-radius: 100px;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 0 20px;
+      width: 200px;
+      height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+      text-align: center;
+      box-sizing: border-box;
+      touch-action: manipulation;
+    }
+
+    .button:hover,
+    .button:focus {
+      background-color: #4a4544;
+      color: #e0e0e0;
+    }
+
+    .button:active {
+      background-color: #222;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="button">Button</button>
+
+</body>
+</html>
